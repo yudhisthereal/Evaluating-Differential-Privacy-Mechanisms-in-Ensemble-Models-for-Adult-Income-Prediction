@@ -1,0 +1,32 @@
+Title Draft:
+    Differential Privacy in Ensemble-Based Mortality Prediction of Atrial Fibrillation Patients: Mechanism and Epsilon Comparison
+Problem Statements:
+    1. Apakah pengaruh penerapan DP berbeda signifikan antar-jenis algoritma: Random Forest, LightGBM, dan XGBoost pada dataset pasien AF?
+    2. Berapa besar nilai epsilon (ε) yang optimal untuk menjaga keseimbangan antara jaminan privasi dan kinerja model prediksi Random Forest, LightGBM, dan XGBoost, dalam dataset MIMIC-IV?
+    3. Apakah mekanisme Laplace, Gaussian, atau PATE lebih cocok untuk digunakan pada skenario prediksi kematian pasien AF dengan data dari MIMIC-IV?
+models:
+    1. Random Forest
+    2. LightGBM
+    3. XGBoost
+epsilons: 0.1, 0.5, 1.0, 2.0, 5.0
+mechanisms: Gaussian, Laplace, PATE
+
+Requirements:
+    pandas
+    numpy
+    seaborn
+    matplotlib
+    scikit-learn
+    lightgbm
+    xgboost
+    diffprivlib
+    tensorflow
+    tensorflow-privacy
+    ctgan
+checklist pengerjaan:
+    [V] Get Dataset
+    [V] EDA
+    [V] Dataset Preprocessing
+    [V] Train Baseline Models (Without DP)
+    [V] Train DP Models
+    [V] Plot all of results 
